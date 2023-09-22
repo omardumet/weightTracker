@@ -1,0 +1,20 @@
+
+
+
+  <h1 style="padding-left: 20px; background-color: #e1e1e1;padding: 10px">Weight Tracker</h1>
+  <div style="padding-left: 20px; padding-right: 20px;
+        background-color: blueviolet; height: auto; display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        overflow: auto; max-height: 550px; padding: 50px 0">
+    <div *ngFor="let box of boxes" style="background-color: aqua; width:120px;
+                                          height: 120px; gap: 5px; margin-bottom: 5px;
+                                          text-align: center; line-height: 120px">
+      <p>{{box}}</p>
+    </div>
+  </div>
+  <div style="position:absolute;bottom: 0; background-color: #e1e1e1; width: 100%; padding: 20px">
+    Enter Weight: <input type="text" [(ngModel)]="weight">
+    <button class="btn btn-primary" (click)="addWeight()">Enter</button>
+  </div>
+
+
